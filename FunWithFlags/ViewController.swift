@@ -49,6 +49,8 @@ extension ViewController {
 extension ViewController {
 
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		
+		guard let viewController = storyboard?.instantiateViewController(identifier: "DetailsViewController") as? DetailsViewController else { return }
+		viewController.imagePath = flagsPaths[indexPath.row]
+		navigationController?.pushViewController(viewController, animated: true)
 	}
 }

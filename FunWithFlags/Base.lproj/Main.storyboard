@@ -56,13 +56,29 @@
         <!--Details View Controller-->
         <scene sceneID="pC1-wp-PRu">
             <objects>
-                <viewController id="S05-t5-aIL" customClass="DetailsViewController" customModule="FunWithFlags" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailsViewController" id="S05-t5-aIL" customClass="DetailsViewController" customModule="FunWithFlags" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wHV-XR-iNZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qEN-lG-JrU">
+                                <rect key="frame" x="16" y="352.5" width="382" height="191"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qEN-lG-JrU" secondAttribute="height" multiplier="2:1" id="qt5-No-SdX"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="eXE-sM-sKB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qEN-lG-JrU" firstAttribute="leading" secondItem="eXE-sM-sKB" secondAttribute="leading" constant="16" id="hzw-wz-G6p"/>
+                            <constraint firstItem="qEN-lG-JrU" firstAttribute="centerX" secondItem="wHV-XR-iNZ" secondAttribute="centerX" id="qde-p5-C8d"/>
+                            <constraint firstItem="qEN-lG-JrU" firstAttribute="centerY" secondItem="wHV-XR-iNZ" secondAttribute="centerY" id="ret-8w-LkB"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="qEN-lG-JrU" id="877-83-Ciu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hNl-bp-lZb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
